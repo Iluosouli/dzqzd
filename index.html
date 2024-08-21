@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #E3E3E3;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Animation */</p>
+<p class="p1">@keyframes scroll {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>0% { transform: translateX(0); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>100% { transform: translateX(-100%); }</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Slider Styling */</p>
+<p class="p1">.slider {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .125);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 150px; /* Maintient la taille originale du bandeau */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 79%; /* Réduit la largeur pour afficher moins de logos en ligne */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.slide-track {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>animation: scroll 150s linear infinite; /* Ajustez la vitesse de défilement selon vos besoins */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: calc(250px * 40); /* Largeur correspondant au nombre total de logos */</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.slide {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 150px; /* Correspond à la hauteur du bandeau */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 0 20px; /* Espacement entre les logos */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-sizing: border-box;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.slide img {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-height: 100px; /* Taille des logos */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>object-fit: contain;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Responsive Adjustments */</p>
+<p class="p1">@media (max-width: 1200px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slider {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 90%; /* Augmente la largeur sur les écrans plus petits */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slide-track {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: calc(250px * 30); /* Ajuste la largeur pour un nombre de logos plus petit */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slider {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 120px; /* Réduit la hauteur du slider pour les tablettes */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 95%; /* Utilise presque toute la largeur disponible */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slide-track {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: calc(250px * 20); /* Ajuste encore la largeur pour les tablettes */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slide {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 120px; /* Ajuste la hauteur des slides */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slide img {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>max-height: 80px; /* Réduit la taille des logos sur les tablettes */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@media (max-width: 480px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slider {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 100px; /* Réduit la hauteur pour les mobiles */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: 100%; /* Utilise toute la largeur disponible sur les mobiles */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slide-track {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: calc(250px * 15); /* Ajuste la largeur pour les mobiles */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slide {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>height: 100px; /* Ajuste la hauteur des slides */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.slide img {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>max-height: 60px; /* Réduit la taille des logos pour les mobiles */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">}</p>
+<p class="p1">&lt;div class="slider"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="slide-track"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Original logos --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/SkgPuLf.png" alt="Logo 1" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/kSURg6D.png" alt="Logo 2" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/gCV8zQ2.png" alt="Logo 3" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/ZD2rz9l.png" alt="Logo 4" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/HvDFz7K.png" alt="Logo 5" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/8he2sMh.png" alt="Logo 6" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/785xj7X.png" alt="Logo 7" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/5ARMYUN.png" alt="Logo 8" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/Xmb0Oky.png" alt="Logo 9" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Duplicate the entire sequence --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/SkgPuLf.png" alt="Logo 1" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/kSURg6D.png" alt="Logo 2" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/gCV8zQ2.png" alt="Logo 3" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/ZD2rz9l.png" alt="Logo 4" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/HvDFz7K.png" alt="Logo 5" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/8he2sMh.png" alt="Logo 6" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/785xj7X.png" alt="Logo 7" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/5ARMYUN.png" alt="Logo 8" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/Xmb0Oky.png" alt="Logo 9" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Duplicate the entire sequence --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/SkgPuLf.png" alt="Logo 1" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/kSURg6D.png" alt="Logo 2" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/gCV8zQ2.png" alt="Logo 3" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/ZD2rz9l.png" alt="Logo 4" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/HvDFz7K.png" alt="Logo 5" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/8he2sMh.png" alt="Logo 6" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/785xj7X.png" alt="Logo 7" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/5ARMYUN.png" alt="Logo 8" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/Xmb0Oky.png" alt="Logo 9" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;!-- Duplicate the entire sequence --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/SkgPuLf.png" alt="Logo 1" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/kSURg6D.png" alt="Logo 2" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/gCV8zQ2.png" alt="Logo 3" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/ZD2rz9l.png" alt="Logo 4" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/HvDFz7K.png" alt="Logo 5" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/8he2sMh.png" alt="Logo 6" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/785xj7X.png" alt="Logo 7" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/5ARMYUN.png" alt="Logo 8" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/Xmb0Oky.png" alt="Logo 9" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">       </span>&lt;!-- Duplicate the entire sequence --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/SkgPuLf.png" alt="Logo 1" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/kSURg6D.png" alt="Logo 2" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/gCV8zQ2.png" alt="Logo 3" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/ZD2rz9l.png" alt="Logo 4" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/HvDFz7K.png" alt="Logo 5" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/8he2sMh.png" alt="Logo 6" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/785xj7X.png" alt="Logo 7" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/5ARMYUN.png" alt="Logo 8" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/Xmb0Oky.png" alt="Logo 9" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Duplicate the entire sequence --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/SkgPuLf.png" alt="Logo 1" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/kSURg6D.png" alt="Logo 2" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/gCV8zQ2.png" alt="Logo 3" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/ZD2rz9l.png" alt="Logo 4" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/HvDFz7K.png" alt="Logo 5" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/8he2sMh.png" alt="Logo 6" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/785xj7X.png" alt="Logo 7" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/5ARMYUN.png" alt="Logo 8" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/Xmb0Oky.png" alt="Logo 9" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Duplicate the entire sequence --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/SkgPuLf.png" alt="Logo 1" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/kSURg6D.png" alt="Logo 2" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/gCV8zQ2.png" alt="Logo 3" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/ZD2rz9l.png" alt="Logo 4" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/HvDFz7K.png" alt="Logo 5" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/8he2sMh.png" alt="Logo 6" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/785xj7X.png" alt="Logo 7" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/5ARMYUN.png" alt="Logo 8" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/Xmb0Oky.png" alt="Logo 9" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Duplicate the entire sequence --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/SkgPuLf.png" alt="Logo 1" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/kSURg6D.png" alt="Logo 2" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/gCV8zQ2.png" alt="Logo 3" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/ZD2rz9l.png" alt="Logo 4" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/HvDFz7K.png" alt="Logo 5" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/8he2sMh.png" alt="Logo 6" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/785xj7X.png" alt="Logo 7" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/5ARMYUN.png" alt="Logo 8" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slide"&gt;&lt;img src="https://i.imgur.com/Xmb0Oky.png" alt="Logo 9" /&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+</body>
+</html>
